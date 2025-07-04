@@ -5,17 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bitcoin Core NACKs - nackamoto.com</title>
     <link rel="icon" type="image/png" href="images/nackamoto-logo.png">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&family=Roboto+Mono:wght@100;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&family=Roboto+Mono:wght@100;400&family=Cormorant+Garamond:wght@400&display=swap" rel="stylesheet">
     <style>
         :root {
             --bg-color: #f8f5ea;
             --text-color: #222;
+            --border-color: #e5e5e5;
         }
         
         @media (prefers-color-scheme: dark) {
             :root {
                 --bg-color: #000;
                 --text-color: #fff;
+                --border-color: #333;
             }
         }
         
@@ -55,25 +57,73 @@
                 display: block;
             }
         }
+        .date-header {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 400;
+            font-size: 1rem;
+            color: #888;
+            text-align: left;
+            margin: 3rem 0 4rem 0;
+            letter-spacing: -0.05em;
+        }
         .last-updated {
             color: #888;
             font-size: 1rem;
             margin-bottom: 3rem;
             margin-top: 0;
             text-align: left;
-            font-family: 'Roboto Mono', monospace;
+            font-family: 'Cormorant Garamond', serif;
             font-weight: 400;
-            letter-spacing: 0;
+            letter-spacing: -0.05em;
         }
         .date-range {
             color: #888;
-            font-size: 0.9rem;
+            font-size: 1rem;
             margin-bottom: 3rem;
             margin-top: 0;
             text-align: left;
-            font-family: 'Roboto Mono', monospace;
+            font-family: 'Cormorant Garamond', serif;
             font-weight: 400;
-            letter-spacing: 0;
+            letter-spacing: -0.05em;
+        }
+        .acks-container {
+            margin-top: 1rem;
+        }
+        .ack-entry {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-bottom: 4rem;
+        }
+        a {
+            color: var(--text-color);
+            text-decoration: underline;
+            text-underline-offset: 0.3em;
+        }
+        a:hover {
+            color: var(--text-color);
+        }
+        .pr-title {
+            word-wrap: break-word;
+            line-height: 1rem;
+        }
+        a.pr-number {
+            font-size: 1rem;
+            font-weight: 400;
+        }
+        .pr-title, .ack-type {
+            font-size: 1rem;
+            font-weight: 400;
+        }
+        a.commenter {
+            font-size: 1rem;
+            font-weight: 400;
+        }
+        .ack-type {
+            display: inline-block;
+            padding: 0.5rem;
+            border: 2px solid var(--text-color);
+            width: fit-content;
         }
         @media (max-width: 768px) {
             body {
@@ -90,7 +140,145 @@
         <img src="images/nackamoto-logo.png" alt="NACKamoto" class="logo logo-light">
         <img src="images/nackamoto-logo-dark.png" alt="NACKamoto" class="logo logo-dark">
     </div>
-    <p class="last-updated">Last updated at 2025-07-04 16:02 UTC</p>
-    <p class="date-range">2025-06-27 to 2025-07-04</p>
+    <p class="last-updated">Last updated at 2025-07-04 18:03 UTC</p>
+    
+    <h2 class="date-header">2025-07-03</h2>
+    
+    <div class="acks-container">
+        <div class="ack-entry">
+            <a href="https://github.com/bitcoin/bitcoin/pull/32615" target="_blank" class="pr-number">#32615</a>
+            <div class="pr-title" title="fee estimate test: fix #31944 by handling a legitimate scenario that …">fee estimate test: fix #31944 by handling a legitimate scenario that …</div>
+            <div class="ack-type">NACK</div>
+            <a href="https://github.com/bitcoin/bitcoin/pull/32615#issuecomment-3032663440" target="_blank" class="commenter">ismaelsadeeq</a>
+        </div>
+        <div class="ack-entry">
+            <a href="https://github.com/bitcoin/bitcoin/pull/32615" target="_blank" class="pr-number">#32615</a>
+            <div class="pr-title" title="fee estimate test: fix #31944 by handling a legitimate scenario that …">fee estimate test: fix #31944 by handling a legitimate scenario that …</div>
+            <div class="ack-type">NACK</div>
+            <a href="https://github.com/bitcoin/bitcoin/pull/32615#issuecomment-3032596320" target="_blank" class="commenter">tnndbtc</a>
+        </div>
+        <div class="ack-entry">
+            <a href="https://github.com/bitcoin/bitcoin/pull/32615" target="_blank" class="pr-number">#32615</a>
+            <div class="pr-title" title="fee estimate test: fix #31944 by handling a legitimate scenario that …">fee estimate test: fix #31944 by handling a legitimate scenario that …</div>
+            <div class="ack-type">NACK</div>
+            <a href="https://github.com/bitcoin/bitcoin/pull/32615#issuecomment-3032501112" target="_blank" class="commenter">ismaelsadeeq</a>
+        </div>
+    
+    <h2 class="date-header">2025-07-02</h2>
+    
+    <div class="acks-container">
+        <div class="ack-entry">
+            <a href="https://github.com/bitcoin/bitcoin/pull/32672" target="_blank" class="pr-number">#32672</a>
+            <div class="pr-title" title="ci: update pwsh to use custom shell that fails-fast">ci: update pwsh to use custom shell that fails-fast</div>
+            <div class="ack-type">NACK</div>
+            <a href="https://github.com/bitcoin/bitcoin/pull/32672#issuecomment-3027913283" target="_blank" class="commenter">fanquake</a>
+        </div>
+        <div class="ack-entry">
+            <a href="https://github.com/bitcoin/bitcoin/pull/32648" target="_blank" class="pr-number">#32648</a>
+            <div class="pr-title" title="cmake, qt: Process `*.qrc` files manually">cmake, qt: Process `*.qrc` files manually</div>
+            <div class="ack-type">NACK</div>
+            <a href="https://github.com/bitcoin/bitcoin/pull/32648#issuecomment-3027824977" target="_blank" class="commenter">fanquake</a>
+        </div>
+    
+    <h2 class="date-header">2025-06-26</h2>
+    
+    <div class="acks-container">
+        <div class="ack-entry">
+            <a href="https://github.com/bitcoin/bitcoin/pull/32790" target="_blank" class="pr-number">#32790</a>
+            <div class="pr-title" title="rpc, test: allow multiple data outputs in `createrawtransaction` & `createpsbt`">rpc, test: allow multiple data outputs in `createrawtransaction` & `createpsbt`</div>
+            <div class="ack-type">Concept NACK</div>
+            <a href="https://github.com/bitcoin/bitcoin/pull/32790#issuecomment-3009784226" target="_blank" class="commenter">luke-jr</a>
+        </div>
+        <div class="ack-entry">
+            <a href="https://github.com/bitcoin/bitcoin/pull/32763" target="_blank" class="pr-number">#32763</a>
+            <div class="pr-title" title="wallet: Replace CWalletTx::mapValue and vOrderForm with explicit class members">wallet: Replace CWalletTx::mapValue and vOrderForm with explicit class members</div>
+            <div class="ack-type">Concept NACK</div>
+            <a href="https://github.com/bitcoin/bitcoin/pull/32763#issuecomment-3009454105" target="_blank" class="commenter">luke-jr</a>
+        </div>
+    
+    <h2 class="date-header">2025-06-20</h2>
+    
+    <div class="acks-container">
+        <div class="ack-entry">
+            <a href="https://github.com/bitcoin/bitcoin/pull/32782" target="_blank" class="pr-number">#32782</a>
+            <div class="pr-title" title="test: disable secp256 tests by default">test: disable secp256 tests by default</div>
+            <div class="ack-type">NACK</div>
+            <a href="https://github.com/bitcoin/bitcoin/pull/32782#issuecomment-2990853580" target="_blank" class="commenter">willcl-ark</a>
+        </div>
+    
+    <h2 class="date-header">2025-06-10</h2>
+    
+    <div class="acks-container">
+        <div class="ack-entry">
+            <a href="https://github.com/bitcoin/bitcoin/pull/32714" target="_blank" class="pr-number">#32714</a>
+            <div class="pr-title" title="init, doc: Replace datacarrier(size) deprecation with non-recommendation text">init, doc: Replace datacarrier(size) deprecation with non-recommendation text</div>
+            <div class="ack-type">Concept NACK</div>
+            <a href="https://github.com/bitcoin/bitcoin/pull/32714#issuecomment-2960239724" target="_blank" class="commenter">instagibbs</a>
+        </div>
+        <div class="ack-entry">
+            <a href="https://github.com/bitcoin/bitcoin/pull/32714" target="_blank" class="pr-number">#32714</a>
+            <div class="pr-title" title="init, doc: Replace datacarrier(size) deprecation with non-recommendation text">init, doc: Replace datacarrier(size) deprecation with non-recommendation text</div>
+            <div class="ack-type">Concept NACK</div>
+            <a href="https://github.com/bitcoin/bitcoin/pull/32714#issuecomment-2959250396" target="_blank" class="commenter">fjahr</a>
+        </div>
+        <div class="ack-entry">
+            <a href="https://github.com/bitcoin/bitcoin/pull/32714" target="_blank" class="pr-number">#32714</a>
+            <div class="pr-title" title="init, doc: Replace datacarrier(size) deprecation with non-recommendation text">init, doc: Replace datacarrier(size) deprecation with non-recommendation text</div>
+            <div class="ack-type">Concept NACK</div>
+            <a href="https://github.com/bitcoin/bitcoin/pull/32714#issuecomment-2958563890" target="_blank" class="commenter">hodlinator</a>
+        </div>
+        <div class="ack-entry">
+            <a href="https://github.com/bitcoin/bitcoin/pull/32714" target="_blank" class="pr-number">#32714</a>
+            <div class="pr-title" title="init, doc: Replace datacarrier(size) deprecation with non-recommendation text">init, doc: Replace datacarrier(size) deprecation with non-recommendation text</div>
+            <div class="ack-type">Concept NACK</div>
+            <a href="https://github.com/bitcoin/bitcoin/pull/32714#issuecomment-2958341821" target="_blank" class="commenter">waketraindev</a>
+        </div>
+        <div class="ack-entry">
+            <a href="https://github.com/bitcoin/bitcoin/pull/32714" target="_blank" class="pr-number">#32714</a>
+            <div class="pr-title" title="init, doc: Replace datacarrier(size) deprecation with non-recommendation text">init, doc: Replace datacarrier(size) deprecation with non-recommendation text</div>
+            <div class="ack-type">Concept NACK</div>
+            <a href="https://github.com/bitcoin/bitcoin/pull/32714#issuecomment-2957986589" target="_blank" class="commenter">Sjors</a>
+        </div>
+    
+    <h2 class="date-header">2025-06-01</h2>
+    
+    <div class="acks-container">
+        <div class="ack-entry">
+            <a href="https://github.com/bitcoin/bitcoin/pull/32654" target="_blank" class="pr-number">#32654</a>
+            <div class="pr-title" title="init: make `-blockmaxweight` startup option debug only">init: make `-blockmaxweight` startup option debug only</div>
+            <div class="ack-type">Concept NACK</div>
+            <a href="https://github.com/bitcoin/bitcoin/pull/32654#issuecomment-2926865658" target="_blank" class="commenter">ismaelsadeeq</a>
+        </div>
+    
+    <h2 class="date-header">2025-05-31</h2>
+    
+    <div class="acks-container">
+        <div class="ack-entry">
+            <a href="https://github.com/bitcoin/bitcoin/pull/32654" target="_blank" class="pr-number">#32654</a>
+            <div class="pr-title" title="init: make `-blockmaxweight` startup option debug only">init: make `-blockmaxweight` startup option debug only</div>
+            <div class="ack-type">Concept NACK</div>
+            <a href="https://github.com/bitcoin/bitcoin/pull/32654#issuecomment-2925674473" target="_blank" class="commenter">ajtowns</a>
+        </div>
+    
+    <h2 class="date-header">2025-05-30</h2>
+    
+    <div class="acks-container">
+        <div class="ack-entry">
+            <a href="https://github.com/bitcoin/bitcoin/pull/32595" target="_blank" class="pr-number">#32595</a>
+            <div class="pr-title" title="build: add a depends dependency provider">build: add a depends dependency provider</div>
+            <div class="ack-type">NACK</div>
+            <a href="https://github.com/bitcoin/bitcoin/pull/32595#issuecomment-2922613939" target="_blank" class="commenter">purpleKarrot</a>
+        </div>
+    
+    <h2 class="date-header">2025-05-29</h2>
+    
+    <div class="acks-container">
+        <div class="ack-entry">
+            <a href="https://github.com/bitcoin/bitcoin/pull/32595" target="_blank" class="pr-number">#32595</a>
+            <div class="pr-title" title="build: add a depends dependency provider">build: add a depends dependency provider</div>
+            <div class="ack-type">NACK</div>
+            <a href="https://github.com/bitcoin/bitcoin/pull/32595#issuecomment-2919014673" target="_blank" class="commenter">fanquake</a>
+        </div>
+    </div>
 </body>
 </html>
