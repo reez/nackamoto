@@ -10,12 +10,14 @@
         :root {
             --bg-color: #fff;
             --text-color: #222;
+            --border-color: #e5e5e5;
         }
         
         @media (prefers-color-scheme: dark) {
             :root {
                 --bg-color: #131313;
                 --text-color: #fff;
+                --border-color: #333;
             }
         }
         
@@ -31,32 +33,213 @@
             font-size: 1rem;
             letter-spacing: 0;
         }
-        h1 {
-            font-size: 4rem;
-            font-weight: 400;
-            color: var(--text-color);
+        .title-section {
             text-align: center;
-            margin-bottom: 1rem;
-            letter-spacing: 0.01em;
-            font-family: 'Roboto Mono', monospace;
+            margin-bottom: 2rem;
+        }
+        .logo {
+            height: 16rem;
+            width: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        .logo-light {
+            display: block;
+        }
+        .logo-dark {
+            display: none;
+        }
+        @media (prefers-color-scheme: dark) {
+            .logo-light {
+                display: none;
+            }
+            .logo-dark {
+                display: block;
+            }
+        }
+        .date-header {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 300;
+            font-size: 1rem;
+            color: #888;
+            text-align: left;
+            margin: 3rem 0 4rem 0;
+            letter-spacing: 0;
+            transform: scaleX(0.85);
+            transform-origin: left;
+            transform-origin: left;
+        }
+        .last-updated {
+            color: #888;
+            font-size: 1rem;
+            margin-bottom: 3rem;
+            margin-top: 0;
+            text-align: left;
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 300;
+            letter-spacing: 0;
+            transform: scaleX(0.85);
+            transform-origin: left;
+        }
+        .date-range {
+            color: #888;
+            font-size: 1rem;
+            margin-bottom: 3rem;
+            margin-top: 0;
+            text-align: left;
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 300;
+            letter-spacing: 0;
+            transform: scaleX(0.85);
+            transform-origin: left;
+        }
+        .acks-container {
+            margin-top: 1rem;
+        }
+        .ack-entry {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-bottom: 4rem;
+        }
+        a {
+            color: var(--text-color);
+            text-decoration: underline;
+            text-underline-offset: 0.3em;
+        }
+        a:hover {
+            color: var(--text-color);
+        }
+        .pr-title {
+            word-wrap: break-word;
+            line-height: 1rem;
+        }
+        a.pr-number {
+            font-size: 1rem;
             font-weight: 400;
         }
-        .error-message {
-            font-size: 1.4rem;
-            color: var(--text-color);
-            text-align: center;
-            margin: 2rem 0;
-            padding: 2rem;
+        .pr-title, .ack-type {
+            font-size: 1rem;
+            font-weight: 400;
+        }
+        a.commenter {
+            font-size: 1rem;
+            font-weight: 400;
+        }
+        .ack-type {
+            display: inline-block;
+            padding: 0.5rem;
             border: 2px solid var(--text-color);
-            background: transparent;
+            width: fit-content;
+            text-decoration: none;
+        }
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+            .logo {
+                height: 8rem;
+            }
         }
     </style>
 </head>
 <body>
-    <h1>Bitcoin Core NACKs</h1>
-    <div class="error-message">
-        Unable to fetch data from GitHub API. This may be due to rate limiting.<br><br>
-        The site will automatically retry when GitHub Actions runs every 2 hours.
+    <div class="title-section">
+        <img src="images/nackamoto-logo.png" alt="NACKamoto" class="logo logo-light">
+        <img src="images/nackamoto-logo-dark.png" alt="NACKamoto" class="logo logo-dark">
+    </div>
+    <p class="last-updated"><a href="https://ackamoto.com" style="color: inherit;">Looking for ACKs? → ackamoto.com</a></p>
+    <p class="last-updated">Last updated at 2025-08-05 06:05 UTC</p>
+    
+    <h2 class="date-header">2025-08-04</h2>
+    
+    <div class="acks-container">
+        <div class="ack-entry">
+            <a href="https://github.com/bitcoin/bitcoin/pull/33126" target="_blank" class="pr-number">#33126</a>
+            <div class="pr-title" title="Allowing multi client support in guix-build">Allowing multi client support in guix-build</div>
+            <a href="https://github.com/bitcoin/bitcoin/blob/master/CONTRIBUTING.md#peer-review" target="_blank" class="ack-type">Concept NACK</a>
+            <a href="https://github.com/bitcoin/bitcoin/pull/33126#issuecomment-3150797545" target="_blank" class="commenter">willcl-ark</a>
+        </div>
+        <div class="ack-entry">
+            <a href="https://github.com/bitcoin/bitcoin/pull/33126" target="_blank" class="pr-number">#33126</a>
+            <div class="pr-title" title="Allowing multi client support in guix-build">Allowing multi client support in guix-build</div>
+            <a href="https://github.com/bitcoin/bitcoin/blob/master/CONTRIBUTING.md#peer-review" target="_blank" class="ack-type">Concept NACK</a>
+            <a href="https://github.com/bitcoin/bitcoin/pull/33126#issuecomment-3150314952" target="_blank" class="commenter">janb84</a>
+        </div>
+        <div class="ack-entry">
+            <a href="https://github.com/bitcoin/bitcoin/pull/33126" target="_blank" class="pr-number">#33126</a>
+            <div class="pr-title" title="Allowing multi client support in guix-build">Allowing multi client support in guix-build</div>
+            <a href="https://github.com/bitcoin/bitcoin/blob/master/CONTRIBUTING.md#peer-review" target="_blank" class="ack-type">Concept NACK</a>
+            <a href="https://github.com/bitcoin/bitcoin/pull/33126#issuecomment-3149703053" target="_blank" class="commenter">dergoegge</a>
+        </div>
+    
+    <h2 class="date-header">2025-08-02</h2>
+    
+    <div class="acks-container">
+        <div class="ack-entry">
+            <a href="https://github.com/bitcoin/bitcoin/pull/33106" target="_blank" class="pr-number">#33106</a>
+            <div class="pr-title" title="policy: lower the default blockmintxfee, incrementalrelayfee, minrelaytxfee">policy: lower the default blockmintxfee, incrementalrelayfee, minrelaytxfee</div>
+            <a href="https://github.com/bitcoin/bitcoin/blob/master/CONTRIBUTING.md#peer-review" target="_blank" class="ack-type">Concept NACK</a>
+            <a href="https://github.com/bitcoin/bitcoin/pull/33106#issuecomment-3146690146" target="_blank" class="commenter">KurtisStirling</a>
+        </div>
+    
+    <h2 class="date-header">2025-08-01</h2>
+    
+    <div class="acks-container">
+        <div class="ack-entry">
+            <a href="https://github.com/bitcoin/bitcoin/pull/33106" target="_blank" class="pr-number">#33106</a>
+            <div class="pr-title" title="policy: lower the default blockmintxfee, incrementalrelayfee, minrelaytxfee">policy: lower the default blockmintxfee, incrementalrelayfee, minrelaytxfee</div>
+            <a href="https://github.com/bitcoin/bitcoin/blob/master/CONTRIBUTING.md#peer-review" target="_blank" class="ack-type">NACK</a>
+            <a href="https://github.com/bitcoin/bitcoin/pull/33106#issuecomment-3141854197" target="_blank" class="commenter">1ma</a>
+        </div>
+    
+    <h2 class="date-header">2025-07-31</h2>
+    
+    <div class="acks-container">
+        <div class="ack-entry">
+            <a href="https://github.com/bitcoin/bitcoin/pull/33106" target="_blank" class="pr-number">#33106</a>
+            <div class="pr-title" title="policy: lower the default blockmintxfee, incrementalrelayfee, minrelaytxfee">policy: lower the default blockmintxfee, incrementalrelayfee, minrelaytxfee</div>
+            <a href="https://github.com/bitcoin/bitcoin/blob/master/CONTRIBUTING.md#peer-review" target="_blank" class="ack-type">Concept NACK</a>
+            <a href="https://github.com/bitcoin/bitcoin/pull/33106#issuecomment-3141253053" target="_blank" class="commenter">luke-jr</a>
+        </div>
+        <div class="ack-entry">
+            <a href="https://github.com/bitcoin/bitcoin/pull/33106" target="_blank" class="pr-number">#33106</a>
+            <div class="pr-title" title="policy: lower the default blockmintxfee, incrementalrelayfee, minrelaytxfee">policy: lower the default blockmintxfee, incrementalrelayfee, minrelaytxfee</div>
+            <a href="https://github.com/bitcoin/bitcoin/blob/master/CONTRIBUTING.md#peer-review" target="_blank" class="ack-type">NACK</a>
+            <a href="https://github.com/bitcoin/bitcoin/pull/33106#issuecomment-3141117458" target="_blank" class="commenter">Retropex</a>
+        </div>
+        <div class="ack-entry">
+            <a href="https://github.com/bitcoin/bitcoin/pull/32959" target="_blank" class="pr-number">#32959</a>
+            <div class="pr-title" title="Reduce minrelaytxfee to 100 sats/kvB">Reduce minrelaytxfee to 100 sats/kvB</div>
+            <a href="https://github.com/bitcoin/bitcoin/blob/master/CONTRIBUTING.md#peer-review" target="_blank" class="ack-type">Concept NACK</a>
+            <a href="https://github.com/bitcoin/bitcoin/pull/32959#issuecomment-3138265471" target="_blank" class="commenter">luke-jr</a>
+        </div>
+    
+    <h2 class="date-header">2025-07-29</h2>
+    
+    <div class="acks-container">
+        <div class="ack-entry">
+            <a href="https://github.com/bitcoin/bitcoin/pull/33069" target="_blank" class="pr-number">#33069</a>
+            <div class="pr-title" title="[POC] wallet: Add Support for BIP-353 DNS-Based Bitcoin Address via External Resolver">[POC] wallet: Add Support for BIP-353 DNS-Based Bitcoin Address via External Resolver</div>
+            <a href="https://github.com/bitcoin/bitcoin/blob/master/CONTRIBUTING.md#peer-review" target="_blank" class="ack-type">Concept NACK</a>
+            <a href="https://github.com/bitcoin/bitcoin/pull/33069#issuecomment-3131364440" target="_blank" class="commenter">1440000bytes</a>
+        </div>
+        <div class="ack-entry">
+            <a href="https://github.com/bitcoin/bitcoin/pull/33069" target="_blank" class="pr-number">#33069</a>
+            <div class="pr-title" title="[POC] wallet: Add Support for BIP-353 DNS-Based Bitcoin Address via External Resolver">[POC] wallet: Add Support for BIP-353 DNS-Based Bitcoin Address via External Resolver</div>
+            <a href="https://github.com/bitcoin/bitcoin/blob/master/CONTRIBUTING.md#peer-review" target="_blank" class="ack-type">Concept NACK</a>
+            <a href="https://github.com/bitcoin/bitcoin/pull/33069#issuecomment-3130771830" target="_blank" class="commenter">luke-jr</a>
+        </div>
+    
+    <h2 class="date-header">2025-07-07</h2>
+    
+    <div class="acks-container">
+        <div class="ack-entry">
+            <a href="https://github.com/bitcoin/bitcoin/pull/32865" target="_blank" class="pr-number">#32865</a>
+            <div class="pr-title" title="cmake: Use `AUTHOR_WARNING` for warnings">cmake: Use `AUTHOR_WARNING` for warnings</div>
+            <a href="https://github.com/bitcoin/bitcoin/blob/master/CONTRIBUTING.md#peer-review" target="_blank" class="ack-type">Concept NACK</a>
+            <a href="https://github.com/bitcoin/bitcoin/pull/32865#issuecomment-3046447987" target="_blank" class="commenter">luke-jr</a>
+        </div>
     </div>
 </body>
 </html>
